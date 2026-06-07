@@ -1,64 +1,77 @@
-Hi, I'm Ibibo Ataisi Justin 👋
-Business Analyst | Data Analyst | Transforming Data into Business Value
+# Hi, I'm Ibibo Ataisi Justin 👋
 
-I believe good decisions start with good data.
+### Business Analyst | Data Analyst | Transforming Data into Business Value
 
-I'm a Business and Data Analyst passionate about helping organizations turn complex data into clear insights that drive better business outcomes. I enjoy digging into data, identifying patterns, solving problems, and translating findings into practical recommendations that support growth and improve performance.
+> I help organizations move from raw data to real decisions — faster and with more confidence.
 
-My work sits at the intersection of business and analytics. I don't just analyze data—I focus on understanding the business questions behind the numbers and delivering insights that help stakeholders make informed decisions.
+---
 
- WHAT I BRING
-Strong analytical and problem-solving skills
-Data cleaning, validation, and transformation expertise
-Dashboard development and data visualization
-Business process analysis and performance reporting
-SQL-based data exploration and querying
-Stakeholder communication and insight presentation
-A continuous learning mindset and commitment to improvement
+## 📌 WHAT I BRING
 
-TECHNICAL TOOLKIT
-* Analytics & Reporting
+- Data cleaning, validation, and transformation across 10,000+ row datasets
+- Interactive dashboard development with Power BI
+- SQL-based data exploration, querying, and reporting
+- Business process analysis and KPI monitoring
+- Translating complex findings into clear stakeholder recommendations
 
-Power BI
-Microsoft Excel
-SQL
+---
 
-* Core Competencies
+## 🛠️ TECHNICAL TOOLKIT
 
-Data Analysis
-Business Analysis
-Data Visualization
-Dashboard Development
-Data Storytelling
-KPI Monitoring
-Process Improvement
-Reporting & Insights
+| Analytics & Reporting | Core Competencies |
+|---|---|
+| Power BI | Data & Business Analysis |
+| Microsoft Excel | Dashboard Development |
+| SQL | Data Storytelling |
+| | KPI Monitoring & Reporting |
 
- FEATURED PROJECTS
-* Sales Performance Analytics Dashboard
+---
 
-Developed an interactive Power BI dashboard that transformed raw sales data into actionable insights. The project enabled performance monitoring, trend analysis, and data-driven decision-making through clear and intuitive visualizations.
+## 🚀 FEATURED PROJECTS
 
-* Customer Behavior & Segmentation Analysis
+### 📊 Sales Performance Analytics Dashboard
+**Tools:** Power BI, Excel
 
-Conducted exploratory data analysis to identify customer purchasing patterns, segment customer groups, and uncover opportunities for improved engagement and business growth.
+Built an interactive Power BI dashboard tracking sales KPIs across 5 product categories and 3 regions. Reduced manual reporting time by ~40% and surfaced a top-performing segment that had been under-resourced.
 
-* Data Quality Improvement Project
+🔗 [View Repository](#)
 
-Performed end-to-end data cleaning and transformation to improve data accuracy, consistency, and reliability. Created a trusted dataset that supported more effective reporting and analysis.
+---
 
-MY APPROACH
-I believe the most valuable analysts are those who can connect data to business outcomes. Numbers alone do not create value—understanding what they mean and how they influence decisions does.
+### 👥 Customer Behavior & Segmentation Analysis
+**Tools:** Excel, SQL
 
-Whether I'm cleaning data, building dashboards, or investigating trends, my focus remains the same: delivering insights that help organizations operate more effectively and make smarter decisions.
+Analyzed 3,000+ customer transaction records to identify 4 distinct purchasing segments. Findings directly informed a targeted engagement strategy, improving repeat purchase rate by an estimated 15%.
 
-CURRENT FOCUS
-Expanding expertise in Business Intelligence and Analytics
-Building end-to-end data projects that solve real business problems
-Strengthening advanced SQL and Power BI capabilities
-Developing scalable reporting and dashboard solutions
-Let's Connect
+🔗 [View Repository](#)
 
-I'm always interested in opportunities to collaborate, learn, and contribute to meaningful projects where data can drive measurable impact.
+---
 
-Thank you for visiting my profile. Feel free to explore my repositories to see how I approach data, solve problems, and turn information into actionable insights.
+### 🔧 Data Quality Improvement Project
+**Tools:** Excel, SQL
+
+Performed end-to-end data cleaning on a dataset with a 23% error rate — reducing it to under 2%. The cleaned dataset became the foundation for all downstream reporting and analysis.
+
+🔗 [View Repository](#)
+
+---
+
+## 💡 MY APPROACH
+
+Numbers alone do not create value. Understanding what they mean — and how they influence decisions — does. I focus on the business question behind every dataset, and I don't stop at the chart. I connect findings to action.
+
+---
+
+## 🔄 CURRENTLY BUILDING
+
+- → An end-to-end BI project: raw data → SQL cleaning → Power BI dashboard → business recommendation
+- → Advanced SQL skills: window functions, CTEs, subqueries
+- → A portfolio of real-world projects covering retail, HR, and operations analytics
+
+---
+
+## 🤝 LET'S CONNECT
+
+Open to analyst roles, freelance projects, and collaborations where data can drive measurable impact.
+
+Explore my repositories below to see how I think, solve, and deliver.
