@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ibibo Ataisi Justin | Data & Business Analyst</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink: #0d0d0d;
+      --paper: #f5f0e8;
+      --gold: #c8973a;
+      --gold-light: #e8c97a;
+      --muted: #6b6560;
+      --card-bg: #ffffff;
+      --border: #e0d8cc;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; width: 100%; z-index: 100;
+      background: rgba(245,240,232,0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 2rem;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700; font-size: 1.1rem;
+      color: var(--ink); text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      text-decoration: none; color: var(--muted);
+      font-size: 0.85rem; font-weight: 500;
+      letter-spacing: 0.05em; text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex; align-items: center;
+      padding: 8rem 2rem 4rem;
+      max-width: 1100px; margin: 0 auto;
+      position: relative;
+    }
+    .hero-content { max-width: 700px; }
+    .hero-tag {
+      display: inline-block;
+      background: var(--gold);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.35rem 0.9rem;
+      border-radius: 2px;
+      margin-bottom: 1.5rem;
+      animation: fadeUp 0.6s ease both;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      animation: fadeUp 0.7s ease 0.1s both;
+    }
+    .hero h1 span { color: var(--gold); }
+    .hero-sub {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 520px;
+      margin-bottom: 2.5rem;
+      animation: fadeUp 0.7s ease 0.2s both;
+    }
+    .hero-cta {
+      display: flex; gap: 1rem; flex-wrap: wrap;
+      animation: fadeUp 0.7s ease 0.3s both;
+    }
+    .btn {
+      padding: 0.8rem 2rem;
+      border-radius: 3px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.2s;
+      cursor: pointer;
+      border: none;
+    }
+    .btn-primary {
+      background: var(--ink);
+      color: var(--paper);
+    }
+    .btn-primary:hover { background: var(--gold); }
+    .btn-outline {
+      background: transparent;
+      color: var(--ink);
+      border: 1.5px solid var(--ink);
+    }
+    .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+
+    .hero-deco {
+      position: absolute; right: 0; top: 50%;
+      transform: translateY(-50%);
+      width: 380px; height: 380px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(200,151,58,0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    /* DIVIDER */
+    .divider {
+      max-width: 1100px; margin: 0 auto;
+      border: none; border-top: 1px solid var(--border);
+    }
+
+    /* SECTIONS */
+    section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 5rem 2rem;
+    }
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 700;
+      margin-bottom: 3rem;
+    }
+
+    /* SKILLS GRID */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+    .skill-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1.8rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .skill-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    }
+    .skill-icon {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+    .skill-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+    .skill-card p {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    /* TOOLS */
+    .tools-list {
+      display: flex; flex-wrap: wrap; gap: 0.75rem;
+      margin-top: 1rem;
+    }
+    .tool-tag {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      padding: 0.4rem 1rem;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--ink);
+    }
+
+    /* PROJECTS */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+    .project-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 2rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    }
+    .project-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: var(--border);
+      margin-bottom: 0.5rem;
+    }
+    .project-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      margin-bottom: 0.75rem;
+    }
+    .project-card p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+    .project-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .project-tag {
+      background: rgba(200,151,58,0.12);
+      color: var(--gold);
+      border-radius: 2px;
+      padding: 0.25rem 0.65rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
+
+    /* EXPERIENCE */
+    .exp-item {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 2rem;
+      padding: 2rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .exp-item:last-child { border-bottom: none; }
+    .exp-date { font-size: 0.85rem; color: var(--muted); padding-top: 0.2rem; }
+    .exp-role {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+    .exp-org { font-size: 0.9rem; color: var(--gold); margin-bottom: 0.75rem; }
+    .exp-desc { font-size: 0.9rem; color: var(--muted); }
+
+    /* CONTACT */
+    .contact-box {
+      background: var(--ink);
+      color: var(--paper);
+      border-radius: 8px;
+      padding: 4rem 3rem;
+      text-align: center;
+    }
+    .contact-box .section-label { color: var(--gold-light); }
+    .contact-box .section-title { color: var(--paper); margin-bottom: 1rem; }
+    .contact-box p { color: rgba(245,240,232,0.7); margin-bottom: 2rem; }
+    .contact-links { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+    .contact-link {
+      padding: 0.75rem 1.75rem;
+      border: 1px solid rgba(245,240,232,0.3);
+      border-radius: 3px;
+      color: var(--paper);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+    .contact-link:hover { background: var(--gold); border-color: var(--gold); }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 640px) {
+      .exp-item { grid-template-columns: 1fr; gap: 0.5rem; }
+      .hero-deco { display: none; }
+      nav { padding: 1rem; }
+      .nav-links { gap: 1rem; }
+      .contact-box { padding: 2.5rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">Ibibo Ataisi Justin</a>
+    <ul class="nav-links">
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-content">
+      <span class="hero-tag">Data & Business Analyst</span>
+      <h1>Hi, I'm <span>Ibibo Ataisi</span> Justin</h1>
+      <p class="hero-sub">I help organizations move from raw data to real decisions — faster and with more confidence.</p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-outline">Get In Touch</a>
+      </div>
+    </div>
+    <div class="hero-deco"></div>
+  </div>
+
+  <hr class="divider"/>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="section-label">What I Bring</div>
+    <div class="section-title">Core Competencies</div>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-icon">🧹</div>
+        <h3>Data Cleaning & Validation</h3>
+        <p>Transformation and validation across 10,000+ row datasets, ensuring data integrity for reliable analysis.</p>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">📊</div>
+        <h3>Data Analysis & EDA</h3>
+        <p>Exploratory data analysis using Excel, pivot tables, and Python to surface meaningful patterns and insights.</p>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">📈</div>
+        <h3>Business Intelligence</h3>
+        <p>Translating data findings into clear business narratives and actionable recommendations for stakeholders.</p>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">🗃️</div>
+        <h3>SQL & Database Querying</h3>
+        <p>Writing SQL queries to extract, filter, and aggregate data from relational databases for reporting.</p>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">📋</div>
+        <h3>Reporting & Documentation</h3>
+        <p>Producing formal analytical reports and professional documentation for public and private sector audiences.</p>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">🎯</div>
+        <h3>Project Management</h3>
+        <p>Certified in project management principles through Coursera, applied in NDDC administrative coordination.</p>
+      </div>
+    </div>
+
+    <div style="margin-top: 3rem;">
+      <div class="section-label">Tools & Technologies</div>
+      <div class="tools-list">
+        <span class="tool-tag">Microsoft Excel</span>
+        <span class="tool-tag">SQL</span>
+        <span class="tool-tag">Python</span>
+        <span class="tool-tag">Power BI</span>
+        <span class="tool-tag">GitHub</span>
+        <span class="tool-tag">Pivot Tables</span>
+        <span class="tool-tag">Data Storytelling</span>
+        <span class="tool-tag">HTML/CSS</span>
+        <span class="tool-tag">Google Sheets</span>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider"/>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="section-label">Portfolio</div>
+    <div class="section-title">Featured Projects</div>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-number">01</div>
+        <h3>Real Estate Data Analysis</h3>
+        <p>End-to-end data cleaning and exploratory analysis on a real estate dataset. Identified pricing trends and market patterns using Excel pivot tables and charts.</p>
+        <div class="project-tags">
+          <span class="project-tag">Excel</span>
+          <span class="project-tag">EDA</span>
+          <span class="project-tag">Data Cleaning</span>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-number">02</div>
+        <h3>Telecom Churn Analysis</h3>
+        <p>Analyzed customer churn patterns for a telecom dataset. Built pivot-based dashboards to identify at-risk customer segments and retention opportunities.</p>
+        <div class="project-tags">
+          <span class="project-tag">Excel</span>
+          <span class="project-tag">Pivot Tables</span>
+          <span class="project-tag">Business Insights</span>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-number">03</div>
+        <h3>Learnify Platform Report</h3>
+        <p>Formal analytical report produced for the Learnify platform, applying structured data storytelling methodology to present findings to a non-technical audience.</p>
+        <div class="project-tags">
+          <span class="project-tag">Reporting</span>
+          <span class="project-tag">Data Storytelling</span>
+          <span class="project-tag">Documentation</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider"/>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="section-label">Background</div>
+    <div class="section-title">Experience & Education</div>
+
+    <div class="exp-item">
+      <div class="exp-date">2023 — Present</div>
+      <div>
+        <div class="exp-role">Visitor Relations & Documentation Officer</div>
+        <div class="exp-org">Niger Delta Development Commission (NDDC), Port Harcourt</div>
+        <div class="exp-desc">Managing visitor relations, official documentation, and administrative coordination within Nigeria's foremost regional development agency.</div>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-date">2024 — Present</div>
+      <div>
+        <div class="exp-role">Data Analytics Career Transition</div>
+        <div class="exp-org">Self-directed Learning & Projects</div>
+        <div class="exp-desc">Completing structured data analytics training covering Excel, SQL, Python, and data visualization. Building a public project portfolio documenting the learning journey on LinkedIn and GitHub.</div>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-date">In View</div>
+      <div>
+        <div class="exp-role">B.Sc. Business Management</div>
+        <div class="exp-org">University of Port Harcourt</div>
+        <div class="exp-desc">Undergraduate degree in Business Management, providing the strategic and organizational foundation for data-driven business analysis.</div>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-date">2024</div>
+      <div>
+        <div class="exp-role">Project Management Certifications</div>
+        <div class="exp-org">Coursera</div>
+        <div class="exp-desc">Multiple project management certifications covering planning, execution, stakeholder communication, and delivery frameworks.</div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider"/>
+
+  <!-- CONTACT -->
+  <section id="contact" style="padding-bottom: 5rem;">
+    <div class="contact-box">
+      <div class="section-label">Let's Connect</div>
+      <div class="section-title">Open to Opportunities</div>
+      <p>Available for data analyst roles, freelance projects, and collaborations.<br/>Let's turn your data into decisions.</p>
+      <div class="contact-links">
+        <a href="https://linkedin.com/in/ibiboataisi" class="contact-link" target="_blank">LinkedIn</a>
+        <a href="https://github.com/Ibiboataisi24" class="contact-link" target="_blank">GitHub</a>
+        <a href="https://twitter.com/TraderIbibo" class="contact-link" target="_blank">Twitter / X</a>
+        <a href="mailto:ibiboataisi24@gmail.com" class="contact-link">Email Me</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Ibibo Ataisi Justin · Built with purpose · Hosted on Netlify</p>
+  </footer>
+
+</body>
+</html>
