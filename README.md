@@ -34,7 +34,7 @@
 
 Built an interactive Power BI dashboard tracking sales KPIs across 5 product categories and 3 regions. Reduced manual reporting time by ~40% and surfaced a top-performing segment that had been under-resourced.
 
-🔗 [View Repository](sales_performance_analytics)
+🔗 [View Repository](https://github.com/Ibiboataisi24/sales_performance_analytics)
 
 ---
 
