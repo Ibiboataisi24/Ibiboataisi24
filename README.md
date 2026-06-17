@@ -43,7 +43,7 @@ Built an interactive Power BI dashboard tracking sales KPIs across 5 product cat
 
 Analyzed 3,000+ customer transaction records to identify 4 distinct purchasing segments. Findings directly informed a targeted engagement strategy, improving repeat purchase rate by an estimated 15%.
 
-🔗 [View Repository](#)
+🔗 [View Repository](https://github.com/Ibiboataisi24/customer_behaviour_and_segmentation_analysis)
 
 ---
 
