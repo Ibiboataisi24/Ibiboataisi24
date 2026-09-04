@@ -27,7 +27,7 @@
 
 ---
 
-## 🚀 FEATURED PROJECTS
+## 🚀 FEATURED PROJECT
 
 ### 📊 Sales Performance Analytics Dashboard
 **Tools:** Power BI, Excel
@@ -35,24 +35,6 @@
 Built an interactive Power BI dashboard tracking sales KPIs across 5 product categories and 3 regions. Reduced manual reporting time by ~40% and surfaced a top-performing segment that had been under-resourced.
 
 🔗 [View Repository](https://github.com/Ibiboataisi24/sales_performance_analytics)
-
----
-
-### 👥 Customer Behavior & Segmentation Analysis
-**Tools:** Excel, SQL
-
-Analyzed 3,000+ customer transaction records to identify 4 distinct purchasing segments. Findings directly informed a targeted engagement strategy, improving repeat purchase rate by an estimated 15%.
-
-🔗 [View Repository](https://github.com/Ibiboataisi24/customer_behaviour_and_segmentation_analysis)
-
----
-
-### 🔧 Data Quality Improvement Project
-**Tools:** Excel, SQL
-
-Performed end-to-end data cleaning on a dataset with a 23% error rate — reducing it to under 2%. The cleaned dataset became the foundation for all downstream reporting and analysis.
-
-🔗 [View Repository](#)
 
 ---
 
